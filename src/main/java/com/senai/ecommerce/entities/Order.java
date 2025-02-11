@@ -19,5 +19,7 @@ public class Order {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
 
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.Instant;
+import java.util.List;
 
 @Data
 @Entity
@@ -14,4 +15,8 @@ public class Payment {
     private Long id;
     private Instant moment;
 
+
+    @OneToMany
+    @MapsId
+    private Order
 }
